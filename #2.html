@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I miss my baby </title>
+  <style>
+    html{
+        background-color: rgb(116, 151, 150);
+
+    }
+    #message {
+      font-size: 50px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h1>does my baby miss meee?</h1>
+
+  <label><input type="radio" name="day" value="YES">  YES</label><br>
+  <label><input type="radio" name="day" value="NO"> NO</label><br>
+  <label><input type="radio" name="day" value="MIJU"> MIJU</label><br><br>
+
+  <button id="submit">Submit</button>
+
+  <div id="message"></div>
+
+  <script>
+    document.getElementById("submit").onclick = function () {
+      let selected = document.querySelector('input[name="day"]:checked');
+      let msg = document.getElementById("message");
+
+      if (selected) {
+        if (selected.value === "YES") {
+          msg.textContent = "HEHEHEHE ME KNOWS! JHHEHE I LOVEE YOUUU MWAAA!!!!!🌹😎";
+        } else if (selected.value === "NO") {
+          msg.textContent = "MISSS MO ME😡😡😡😡!!!";
+        } else if (selected.value === "MIJU") {
+          msg.textContent = "BLAA BLAAA MISS MO ME🤭🤭🤭!! :(";
+        }
+      } else {
+        msg.textContent = "Please select an option.";
+      }
+    };
+  </script>
+</body>
+</html>
